@@ -4,8 +4,8 @@ import Rash from "../assets/rash2.jpg"
 const Hero = () => {
     return ( <Herodiv>
         <HeroLeft>
-            <p>👋🏼 Hi There! WELCOME</p>
-            <h2>I'm <span>Rashidah Sadiq</span></h2>
+            <p><span id="wave">👋🏼</span> Hi There! WELCOME</p>
+            <h2>I'm <span id="myName">Rashidah Sadiq</span></h2>
             <h3>A Frontend Developer</h3>
             <h6> A frontend developer with a love for coding and a passion for creating engaging and memorable web experiences.</h6>
 
@@ -33,9 +33,9 @@ const Herodiv = styled.div`
         
         font-weight: 600;
         border: 4px solid;
-        padding: 10px;
+        padding: 9px;
         border-radius: 20px;
-        width: 280px;
+        width: 270px;
         text-align: center;
         font-size: 20px;
         background-color: #010001;
@@ -48,7 +48,7 @@ const Herodiv = styled.div`
         /* color: #52154e; */
         
     }
-    span{
+    #myName{
         background-image: linear-gradient(to bottom, #52154e, #f641d8, #ebc5e5); 
         background-clip: text;
         -webkit-background-clip: text;
@@ -64,6 +64,15 @@ const Herodiv = styled.div`
         max-width: 500px;
         line-height: 30px;
     }
+    #wave{
+        margin-right: 5px;
+        position: relative;
+        animation: waving 0.5s infinite;
+    }
+    @keyframes waving {
+        from {left: 0px;}
+        to {left: 4px;}
+        }
 
     @media (max-width: 1100px) {
         h2{

@@ -41,23 +41,21 @@ const TechDiv = styled.div`
         text-align: center;
         color: #52154e;
         margin: 50px auto 0px;
+        text-shadow: 2px 2px #f641d8;
     }
     hr{
         width: 200px;
-        /* height: 5px; */
         color:#f641d8 ;
-        /* background-color: #f641d8; */
         border-radius: 3px;
         border: 3px solid;
-        /* margin: 20px auto  ; */
         
     }
 `
 const Arsenal = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: space-around;
     max-width: 90vw;
-    margin: 50px auto;
+    margin: 50px auto 10px;
 `

@@ -29,6 +29,7 @@ const AboutContent = styled.div`
         text-align: center;
         color: #52154e;
         margin: 30px auto 0px;
+        text-shadow: 2px 2px #f641d8;
     }
     hr{
         width: 100px;

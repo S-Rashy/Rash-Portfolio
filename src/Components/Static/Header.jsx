@@ -12,7 +12,10 @@ const Header = () => {
             <Link to="/about">
                 <nav>About</nav>
             </Link>
-            <nav>Projects</nav>
+
+            <Link to="/projects">
+                <nav>Projects</nav>
+            </Link >
             <nav>Contact</nav>
         </HeaderContent>
 
