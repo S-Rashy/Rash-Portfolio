@@ -19,16 +19,20 @@ const About = () => {
  
 export default About;
 
-const AboutDiv = styled.div``
+const AboutDiv = styled.div`
+     margin: 80px auto;
+`
 const AboutContent = styled.div`
     max-width: 1440px;
+    margin: auto;
+   
     /* border: 1px solid; */
 
     h2{
         font-size: 30px;
         text-align: center;
         color: #52154e;
-        margin: 30px auto 0px;
+        margin: 0px auto 0px;
         text-shadow: 2px 2px #f641d8;
     }
     hr{

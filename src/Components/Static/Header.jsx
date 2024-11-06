@@ -16,7 +16,11 @@ const Header = () => {
             <Link to="/projects">
                 <nav>Projects</nav>
             </Link >
-            <nav>Contact</nav>
+
+            <Link to="/contact">
+                <nav>Contact</nav>
+            </Link>
+
         </HeaderContent>
 
     </HeaderDiv> );
@@ -26,8 +30,11 @@ export default Header;
 
 const HeaderDiv = styled.div`
     position: fixed;
+    top: 0;
     /* border:1px solid; */
+    margin-top: 0px;
     width: 100vw;
+    z-index: 1;
 
 `
 const HeaderContent=styled.div`

@@ -25,7 +25,7 @@ export default Social;
 const SocialDiv = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 40px auto;
+    margin: 30px auto;
     max-width: 400px ;
     /* border: 1px solid; */
 

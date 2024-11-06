@@ -10,7 +10,7 @@ const Contact = () => {
             {/* <label htmlFor="name">Email</label> <br /> <br /> */}
             <input type="text" placeholder="What's your Email" required /> <br />
 
-            <textarea name="message" id="" placeholder="Please type your message"  rows="8" cols="44" required></textarea><br /> <br />
+            <textarea name="message" id="" placeholder="Please type your message"   required></textarea><br /> <br />
 
             <button>Submit</button>
 
@@ -23,7 +23,7 @@ const Contact = () => {
  
 export default Contact;
 const ContactDiv = styled.div`
-    margin: auto;
+    margin: 70px auto;
    
 
     h2{
@@ -43,35 +43,45 @@ const ContactDiv = styled.div`
     form{
         max-width: 500px;
         /* border: 1px solid; */
-        margin: 50px auto;
+        margin: 40px auto;
         
     }
-    input{
+    input, textarea{
         width: 500px;
-        height: 55px;
-        margin: 0px auto 30px;
+        margin: 0px auto 20px;
         color: #52154e;
         font-size: 20px; 
+        padding: 10px;
         background-color: #f68fe5 ;
-        border: 1px solid #52154e;
+        /* border: 1px solid #52154e; */
         border-radius: 10px;
     }
+    input{
+       height: 50px;
+    }
     textarea{
-        color: #52154e;
-        font-size: 20px; 
-        background-color: #f68fe5 ;
-        border-radius: 10px;
+        height: 150px;
+        margin-bottom: 10px;
     }
     button{
         color: #f641d8;
         background-color: #52154e;
         width: 200px;
-        margin: auto;
+        height: 50px;
+        border-radius: 10px;
         font-weight: 600;
+        font-size: 20px;
         &:hover{
             color: #52154e;
             background-color: #f68fe5;
         }
+       
     }
+    @media (max-width:650px) {
+            input, textarea, form{
+                width: 80vw;
+               
+            }
+        }
     
 `

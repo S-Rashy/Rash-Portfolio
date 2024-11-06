@@ -15,6 +15,8 @@ const Project = () => {
 export default Project;
 
 const ProjectDiv = styled.div`
+    margin: 80px auto 0px;
+    max-width: 1440px;
     h2{
         text-align: center;
         color: #52154e;

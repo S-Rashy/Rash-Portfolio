@@ -37,6 +37,8 @@ const Tech = () => {
 export default Tech;
 
 const TechDiv = styled.div`
+    margin: 50px auto 0px;
+    max-width: 1440px;
     h1{
         text-align: center;
         color: #52154e;
@@ -57,5 +59,5 @@ const Arsenal = styled.div`
     gap: 15px;
     justify-content: space-around;
     max-width: 90vw;
-    margin: 50px auto 10px;
+    margin: 40px auto 10px;
 `

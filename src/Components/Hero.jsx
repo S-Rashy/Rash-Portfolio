@@ -22,13 +22,13 @@ export default Hero;
 
 const Herodiv = styled.div`
     display: flex;
-    background-color: #f9cff2;
+    /* background-color: #f9cff2; */
     justify-content: space-around;
     align-items: center;
     padding: 50px;
     max-width: 1440px;
-    margin: auto;
-    border-bottom: 1px solid #f641d8;
+    margin: 30px auto 0px;
+    /* border-bottom: 1px solid #f641d8; */
     p{
         
         font-weight: 600;
