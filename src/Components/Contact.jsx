@@ -5,10 +5,10 @@ const Contact = () => {
         <hr />
         <form action="">
             {/* <label htmlFor="name">Name</label> <br /> <br /> */}
-            <input type="text" placeholder="What's your name" required /> <br />
+            <input type="text" placeholder="What's your name?" required /> <br />
 
             {/* <label htmlFor="name">Email</label> <br /> <br /> */}
-            <input type="text" placeholder="What's your Email" required /> <br />
+            <input type="text" placeholder="What's your Email?" required /> <br />
 
             <textarea name="message" id="" placeholder="Please type your message"   required></textarea><br /> <br />
 
