@@ -11,11 +11,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Social = () => {
     return ( <SocialDiv>
-        <SocialProps Link="" Icon={<RiTwitterXFill />}/>
-        <SocialProps Link="" Icon={<FaLinkedinIn />}/>
+        <SocialProps Link="https://twitter.com/RforRashy" Icon={<RiTwitterXFill />}/>
+        <SocialProps Link="www.linkedin.com/in/rashidah-sadiq" Icon={<FaLinkedinIn />}/>
         <SocialProps Link="" Icon={<FaGithub />}/>
         <SocialProps Link="" Icon={<IoLogoVercel />}/>
-        <SocialProps Link="" Icon={<FaWhatsapp />}/>
+        <SocialProps Link="https://wa.me/2349097366587" Icon={<FaWhatsapp />}/>
         <SocialProps Link="" Icon={<FaTelegramPlane />}/>
     </SocialDiv> );
 }
