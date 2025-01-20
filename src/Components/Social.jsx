@@ -7,16 +7,17 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 
 const Social = () => {
     return ( <SocialDiv>
         <SocialProps Link="https://twitter.com/RforRashy" Icon={<RiTwitterXFill />}/>
         <SocialProps Link="www.linkedin.com/in/rashidah-sadiq" Icon={<FaLinkedinIn />}/>
-        <SocialProps Link="" Icon={<FaGithub />}/>
-        <SocialProps Link="" Icon={<IoLogoVercel />}/>
+        <SocialProps Link="https://github.com/S-Rashy" Icon={<FaGithub />}/>
+        <SocialProps Link="sadiqrashidah@gmail.com " Icon={<IoIosMail />}/>
         <SocialProps Link="https://wa.me/2349097366587" Icon={<FaWhatsapp />}/>
-        <SocialProps Link="" Icon={<FaTelegramPlane />}/>
+        <SocialProps Link="https://t.me/RforRashy" Icon={<FaTelegramPlane />}/>
     </SocialDiv> );
 }
  

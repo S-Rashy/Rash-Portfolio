@@ -27,7 +27,7 @@ export default ProjectProps;
 const ProjectPropsDiv = styled.div`
     width: 300px;
     height: 400px;
-    border-radius: 15px;
+    border-radius: 35px 35px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@ const ProjectPropsDiv = styled.div`
     img{
         width: 298px;
         height: 160px;
-        border-radius: 10px 10px 0px;
+        border-radius: 20px 20px 0px 0px;
     }
     p{
         width: 260px;
