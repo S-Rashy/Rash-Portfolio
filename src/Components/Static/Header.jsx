@@ -41,8 +41,8 @@ const HeaderContent=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    width: 400px;
+    padding: 10px;
+   max-width: 400px;
     font-weight: 600;
     margin: 20px auto;
     /* border:1px solid; */
@@ -55,12 +55,20 @@ const HeaderContent=styled.div`
     
     nav{
         color: #f641d8;
+        transition: all 0.3s ease;
        
         &:hover{
-            font-size: 20px;
+            transform: scale(1.4);
             color: #52154e ;
+            text-decoration: underline;
             
         }
     }
+    @media (max-width: 470px) {
+  a{
+    font-size: 14px;
+    
+  }
+  }
     
 `

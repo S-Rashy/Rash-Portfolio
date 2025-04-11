@@ -5,35 +5,35 @@ import Rash from "../assets/rash2.jpg";
 const Hero = () => {
   return (
     <Herodiv>
-     <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <HeroLeft>
           <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ scale: 0.7, opacity: 0, y: -30 }}
+            whileInView={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span id="wave">👋🏼</span> Hi There! WELCOME
+            <span id="wave">👋🏼</span> Hi There, Welcome!
           </motion.p>
           <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             I'm <span id="myName">Rashidah Sadiq</span>
           </motion.h2>
           <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             A Frontend Developer
           </motion.h3>
           <motion.h6
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
@@ -45,11 +45,10 @@ const Hero = () => {
 
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 50 }}
         transition={{ duration: 1.0, ease: "easeOut" }}
-        viewport={{ once: false, amount:0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
-        
         <HeroRight>
           <img src={Rash} alt="" />
         </HeroRight>
@@ -62,28 +61,43 @@ export default Hero;
 
 const Herodiv = styled.div`
   display: flex;
-  /* background-color: #f9cff2; */
   justify-content: space-around;
   align-items: center;
-  padding: 50px;
+  padding: 40px 40px 20px;
   max-width: 1440px;
-  margin: 30px auto 0px;
-  /* border-bottom: 1px solid #f641d8; */
+  margin: 30px auto ;
   p {
     font-weight: 600;
-    border: 4px solid;
     padding: 9px;
     border-radius: 20px;
     width: 270px;
     text-align: center;
     font-size: 20px;
-    background-color: #010001;
-    color: #f641d8;
-    /* margin: auto; */
+    background: linear-gradient(45deg, #010001, #52154e, #a4078a);
+    background-size: 200% 200%;
+    animation: gradientBG 3s infinite alternate;
+    color: white;
+    border: 4px solid #f641d8;
+    box-shadow: 0px 0px 10px #f641d8, 0px 0px 20px #ff00ff;
+    text-shadow: 0px 0px 5px #f641d8, 0px 0px 10px #ff00ff;
   }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  p:hover {
+    transform: scale(1.1);
+    background-color: #f641d8;
+  }
+
   h2 {
     font-size: 55px;
-    /* color: #52154e; */
   }
   #myName {
     background-image: linear-gradient(to bottom, #52154e, #f641d8, #ebc5e5);
@@ -144,29 +158,17 @@ const Herodiv = styled.div`
   }
 `;
 const HeroLeft = styled.div`
-  /* max-width: 50%; */
-  /* border: 1px solid; */
 
   @media (max-width: 900px) {
     width: 80vw;
   }
-
-  /* border: 1px solid; */
-  /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
-  /* align-items: center; */
 `;
 const HeroRight = styled.div`
-
   img {
     width: 450px;
-    /* height: 400px; */
     border: 5px solid #f641d8;
-    border-radius: 5550px;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    border-radius: 50%;
     box-shadow: 10px 10px 5px #de50d5;
-    /* #52154e;  #f641d8 #f9cff2*/
     background-color: inherit;
   }
 

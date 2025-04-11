@@ -34,6 +34,7 @@ const ProjectPropsDiv = styled.div`
     align-items: center;
   
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: #f02eaa66 5px 5px, #f02eaa4c 10px 10px, #f02eaa33 15px 15px, #f02eaa18 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
     img{
         width: 298px;
         height: 160px;
@@ -48,6 +49,9 @@ const ProjectPropsDiv = styled.div`
     height: 45px;
     background-color: #f68fe5;
     display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 0.3s ease;
+
    
     &:hover{
         background-color: #52154e;
@@ -69,7 +73,6 @@ const ProjectPropsDiv = styled.div`
 `
 const AllLinks = styled.div`
     width: 180px;
-    
     display: flex;
     justify-content: space-around;
     margin: auto;

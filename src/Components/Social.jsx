@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import SocialProps from "../Reusables/SocialProps";
 
 import { RiTwitterXFill } from "react-icons/ri";
@@ -8,6 +9,7 @@ import { IoLogoVercel } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+
 
 
 const Social = () => {

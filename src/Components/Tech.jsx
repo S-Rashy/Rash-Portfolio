@@ -4,27 +4,30 @@ import Js from "../assets/tech/javascript.svg"
 import Ts from "../assets/tech/typescript.svg"
 import ReactL from "../assets/tech/react.svg"
 import Styled from "../assets/tech/styled.png"
+import Tailwind from "../assets/tech/tailwind.svg"
 import Vscode from "../assets/tech/vscode.svg"
 import Git from "../assets/tech/git.svg"
 import Github from "../assets/tech/github.svg"
 
 
-
-
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import Techprops from "../Reusables/Techprops"
 const Tech = () => {
     return ( <TechDiv>
         <h1>MY TECH ARSENAL</h1>
         <hr />
 
-        <Arsenal>
+        <Arsenal
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}>
             <Techprops Logo={Html} Name="HTML"/>
             <Techprops Logo={Css} Name="CSS"/>
             <Techprops Logo={Js} Name="JavaScript"/>
-            <Techprops Logo={Ts} Name="TYpescript"/>
+            <Techprops Logo={Ts} Name="Typescript"/>
             <Techprops Logo={ReactL} Name="React"/>
             <Techprops Logo={Styled} Name="Styled Components"/>
+            <Techprops Logo={Tailwind} Name="Tailwind"/>
             <Techprops Logo={Vscode} Name="VS Code"/>
             <Techprops Logo={Git} Name="Git"/>
             <Techprops Logo={Github} Name="GitHub"/>
@@ -37,8 +40,10 @@ const Tech = () => {
 export default Tech;
 
 const TechDiv = styled.div`
-    margin: 50px auto 0px;
+    margin: 80px auto 0px;
     max-width: 1440px;
+    overflow: hidden;
+    /* border: 1px solid; */
     h1{
         text-align: center;
         color: #52154e;
@@ -53,11 +58,16 @@ const TechDiv = styled.div`
         
     }
 `
-const Arsenal = styled.div`
+const Arsenal = styled(motion.div)`
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: space-around;
     max-width: 90vw;
     margin: 40px auto 10px;
+
+    gap: 30px;
+  margin: 40px auto 10px;
+  width: max-content;
+  align-items: center;
+  padding: 10px 0;
 `
