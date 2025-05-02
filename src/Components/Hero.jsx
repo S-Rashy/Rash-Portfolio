@@ -45,7 +45,7 @@ const Hero = () => {
 
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.0, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.3 }}
       >

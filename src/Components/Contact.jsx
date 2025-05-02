@@ -39,7 +39,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       })
       .catch((error) => {
         // console.log('FAILED...', error.text);
-        setStatus({ submitting: false, submitted: false, error: 'Failed to send message' });
+        setStatus({ submitting: false, submitted: false, error: 'Failed to send message, Please try again.' });
       });
   };
 
@@ -83,7 +83,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
           </button>
           
           {status.error && <p className="error-message">{status.error}</p>}
-          {status.submitted && <p className="success-message">Message sent successfully!</p>}
+          {status.submitted && <p className="success-message">Thank you for reaching out, yor message will be attended to shortly.</p>}
         </form>
         <div id="resume"></div>
       </div>
