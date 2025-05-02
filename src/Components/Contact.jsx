@@ -83,7 +83,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
           </button>
           
           {status.error && <p className="error-message">{status.error}</p>}
-          {status.submitted && <p className="success-message">Thank you for reaching out, yor message will be attended to shortly.</p>}
+          {status.submitted && <p className="success-message">Thank you for reaching out, your message will be attended to shortly.</p>}
         </form>
         <div id="resume"></div>
       </div>
