@@ -109,7 +109,7 @@ const ContactDiv = styled.div`
     font-size: 30px;
   }
   hr {
-    width: 80px;
+    width: 100px;
     color: #f641d8;
     border-radius: 3px;
     border: 3px solid;

@@ -19,13 +19,13 @@ const Project = () => {
 
         <ProjectContainer>
             {/* <ProjectProps Image={Furniro} Title="Furniro e-commerce" Description="The landing page of an e-Commerce site built with HTML and CSS using designs from figma" Link="https://s-rashy.github.io/furniro/" Repo=""/> */}
-            <ProjectProps Image={BCollar} Title="BCollar" Description="A full Stack application that connects artisans with potential clients" Link="https://s-rashy.github.io/furniro/" Repo=""/>
-            <ProjectProps Image={Country} Title="Country info " Description="An interactive website that displays countries' data fetched from an API with search and filter features" Link="https://s-rashy.github.io/restCountries/" Repo=""/>
+            <ProjectProps Image={BCollar} Title="BCollar" Description="A full Stack application that connects artisans with potential clients" Link="frontendbcolar-pyxh.vercel.app" Repo="frontendbcolar-pyxh.vercel.app"/>
+            <ProjectProps Image={Country} Title="Country info " Description="An interactive website that displays countries' data fetched from an API with search and filter features" Link="s-rashy.github.io/restCountries" Repo="github.com/S-Rashy/restCountries"/>
             {/* <ProjectProps Image={Coolors} Title="Coolors Clone" Description="Succesfully cloned the landing page of Coolors with React" Link="" Repo=""/> */}
-            <ProjectProps Image={Sunnyside} Title="SunnySide" Description="" Link="" Repo=""/>
-            <ProjectProps Image={Ticket} Title="Ticket Generator" Description="This app accepts user input and generates ticket instantly for an event" Link="" Repo=""/>
+            <ProjectProps Image={Sunnyside} Title="SunnySide" Description="A static website for a creative agency, built with modern HTML and CSS." Link="sunnyside-eta-ruby.vercel.app" Repo="github.com/S-Rashy/sunnyside"/>
+            <ProjectProps Image={Ticket} Title="Ticket Generator" Description="This app accepts user input and generates ticket instantly for an event" Link="ticket-generator-coral.vercel.app" Repo="github.com/S-Rashy/TicketGenerator"/>
             {/* <ProjectProps Image={Nexcent} Title="Nexcent" Description="Landing page of a webpage that focuses on talent hiring built with HTML and CSS" Link="" Repo=""/> */}
-            <ProjectProps Image={Desserts} Title="Product list with cart" Description="Responsive product list website built by fetching data from API with add to cart features" Link="https://product-list-with-cart-livid-omega.vercel.app/" Repo=""/>
+            <ProjectProps Image={Desserts} Title="Product list with cart" Description="Responsive product list website built by fetching data from API with add to cart features" Link="product-list-with-cart-livid-omega.vercel.app" Repo="github.com/S-Rashy/product-list-with-cart"/>
         </ProjectContainer>
 
     </ProjectDiv> );
@@ -34,7 +34,7 @@ const Project = () => {
 export default Project;
 
 const ProjectDiv = styled.div`
-    margin: 80px auto 0px;
+    margin: 40px auto 0px;
     max-width: 1440px;
     
     h2{
@@ -45,7 +45,7 @@ const ProjectDiv = styled.div`
         font-size: 30px;
     }
     hr{
-        width: 80px;
+        width: 100px;
         color:#f641d8 ;
         border-radius: 3px;
         border: 3px solid;

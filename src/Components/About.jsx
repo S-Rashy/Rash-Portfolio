@@ -33,12 +33,10 @@ export default About;
 
 const AboutDiv = styled.div`
   margin: 80px auto;
-  /* border: 1px solid; */
 `;
 const AboutContent = styled.div`
   max-width: 1440px;
   margin: 0px auto 30px;
- 
 
   h2 {
     font-size: 30px;
@@ -48,7 +46,7 @@ const AboutContent = styled.div`
     text-shadow: 2px 2px #f641d8;
   }
   hr {
-    width: 100px;
+    width: 110px;
     color: #f641d8;
     border-radius: 3px;
     border: 3px solid;
