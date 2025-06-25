@@ -1,20 +1,29 @@
 import styled from "styled-components";
 import Tech from "./Tech";
 import Social from "./Social";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <AboutDiv>
-      <AboutContent>
-        <h2>ABOUT ME</h2>
-        <hr />
-        <p>
+      <AboutContent >
+        <h2 data-aos="fade-down">ABOUT ME</h2>
+        <hr data-aos="fade-up" data-aos-delay="200" />
+        <p data-aos="fade-right" data-aos-delay="200">
           I am a Frontend Developer from Lagos Nigeria with experience in
           creating responsive, user-centric interfaces. Whether it's building
           websites tailored to brand needs or collaborating within a team, I put
           in solid efforts in bringing digital visions to life and enhancing
           user experiences.
         </p>
-        <p>
+        <p data-aos="fade-left" data-aos-delay="400">
           As a developer with a background in health education, I understand the
           importance of clear communication, empathy, and user-centered design.
           I'm eager to apply these skills to create intuitive and accessible web
@@ -23,16 +32,16 @@ const About = () => {
       </AboutContent>
 
       <Social />
-
       <Tech />
     </AboutDiv>
   );
 };
 
+
 export default About;
 
 const AboutDiv = styled.div`
-  margin: 80px auto;
+  margin: 50px auto 20px;
 `;
 const AboutContent = styled.div`
   max-width: 1440px;

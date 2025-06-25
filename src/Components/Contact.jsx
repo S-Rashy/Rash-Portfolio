@@ -94,9 +94,11 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 export default Contact;
 
 const ContactDiv = styled.div`
-  max-width: 1200px;
+  /* max-width: 1200px; */
   padding: 20px;
-  margin: 70px auto;
+  margin: 70px auto 0px;
+   background-color: hsl(311, 64%, 94%);
+  color: rgb(43, 44, 44);
   .contact {
     display: flex;
   }

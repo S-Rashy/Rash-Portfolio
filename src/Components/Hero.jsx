@@ -5,6 +5,18 @@ import Rash from "../assets/rash2.jpg";
 const Hero = () => {
   return (
     <Herodiv>
+      {Array.from({ length: 70 }).map((_, i) => (
+        <FloatingDot
+          key={i}
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDuration: `${3 + Math.random() * 4}s`,
+            animationDelay: `${Math.random() * 4}s`,
+          }}
+        />
+      ))}
+
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,16 +72,28 @@ const Hero = () => {
 export default Hero;
 
 const Herodiv = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 40px 40px 20px;
+  padding: 50px 40px 20px;
   max-width: 1440px;
-  margin: 30px auto ;
+  margin: 0px auto 30px;
+  background-color: hsl(311, 64%, 94%);
+  color: rgb(43, 44, 44);
+  border-radius: 0px 0px 40px 40px;
+  overflow: hidden;
+  z-index: 1;
+  >* {
+    z-index: 1;
+    position: relative;
+  }
+
   p {
     font-weight: 600;
     padding: 9px;
     border-radius: 20px;
+    margin-top: 30px;
     width: 270px;
     text-align: center;
     font-size: 20px;
@@ -104,6 +128,7 @@ const Herodiv = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    font-family: Lato;
   }
   h3 {
     color: #030000;
@@ -157,12 +182,43 @@ const Herodiv = styled.div`
     }
   }
 `;
-const HeroLeft = styled.div`
 
+const FloatingDot = styled.div`
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(246, 65, 216, 0.3); // from #f641d8
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2);
+
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 0;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(20px, -20px);
+    }
+    50% {
+      transform: translate(-15px, -40px);
+    }
+    75% {
+      transform: translate(-20px, -10px);
+    }
+  }
+`;
+
+const HeroLeft = styled.div`
   @media (max-width: 900px) {
     width: 80vw;
   }
 `;
+
 const HeroRight = styled.div`
   img {
     width: 450px;
@@ -170,6 +226,10 @@ const HeroRight = styled.div`
     border-radius: 50%;
     box-shadow: 10px 10px 5px #de50d5;
     background-color: inherit;
+  }
+  img:hover {
+    transform: scale(1.02) rotate(1deg);
+    transition: 0.3s ease;
   }
 
   @media (max-width: 1100px) {

@@ -1,74 +1,91 @@
 import styled from "styled-components";
+import { FaHome, FaUserAlt, FaCode, FaEnvelope } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-// import R from "../assets/R.jpg"
 const Header = () => {
-    return ( <HeaderDiv>
-        <HeaderContent>
-            <Link to="/" >
-                <nav>Home</nav>
-            </Link>
+  return (
+    <HeaderDiv>
+      <HeaderContent>
+        <StyledLink href="/">
+          <FaHome />
+          <span>Home</span>
+        </StyledLink>
 
-            <Link to="/about">
-                <nav>About</nav>
-            </Link>
+        <StyledLink href="#about">
+          <FaUserAlt />
+          <span>About</span>
+        </StyledLink>
 
-            <Link to="/projects">
-                <nav>Projects</nav>
-            </Link >
+        <StyledLink href="#projects">
+          <FaCode />
+          <span>Projects</span>
+        </StyledLink>
 
-            <Link to="/contact">
-                <nav>Contact</nav>
-            </Link>
+        <StyledLink href="#contact">
+          <FaEnvelope />
+          <span>Contact</span>
+        </StyledLink>
+      </HeaderContent>
+    </HeaderDiv>
+  );
+};
 
-        </HeaderContent>
-
-    </HeaderDiv> );
-}
- 
 export default Header;
 
 const HeaderDiv = styled.div`
-    position: fixed;
-    top: 0;
-    /* border:1px solid; */
-    margin-top: 0px;
-    width: 100vw;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+`;
 
-`
-const HeaderContent=styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-   max-width: 400px;
-    font-weight: 600;
-    margin: 20px auto;
-    /* border:1px solid; */
-    height: 40px;
-    border-radius: 20px;
-    background-color: hsl(309.9, 90.9%, 85.9%);
-    a{
-            text-decoration: none;
-        }
-    
-    nav{
-        color: #f641d8;
-        transition: all 0.3s ease;
-       
-        &:hover{
-            transform: scale(1.4);
-            color: #52154e ;
-            text-decoration: underline;
-            
-        }
+const HeaderContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  max-width: 400px;
+  font-weight: 600;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 20px;
+  background-color: hsl(309.9, 90.9%, 85.9%);
+
+  @media (max-width: 470px) {
+    max-width: 90vw;
+  }
+`;
+
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f641d8;
+  transition: all 0.3s ease;
+  font-size: 16px;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    color: #52154e;
+    text-decoration: underline;
+  }
+
+  span {
+    transition: opacity 0.3s ease;
+  }
+
+  @media (max-width: 470px) {
+    span {
+      font-size: 12px;
     }
-    @media (max-width: 470px) {
-  a{
-    font-size: 14px;
-    
+    svg {
+      font-size: 16px;
+    }
   }
-  }
-    
-`
+`;

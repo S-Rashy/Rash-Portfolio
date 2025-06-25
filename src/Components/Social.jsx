@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import SocialProps from "../Reusables/SocialProps";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -10,10 +14,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
-
-
 const Social = () => {
-    return ( <SocialDiv>
+     useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+    return ( <SocialDiv >
         <SocialProps Link="https://twitter.com/RforRashy" Icon={<RiTwitterXFill />}/>
         <SocialProps Link="www.linkedin.com/in/rashidah-sadiq" Icon={<FaLinkedinIn />}/>
         <SocialProps Link="https://github.com/S-Rashy" Icon={<FaGithub />}/>

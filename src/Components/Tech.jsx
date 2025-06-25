@@ -3,6 +3,7 @@ import Css from "../assets/tech/css.svg";
 import Js from "../assets/tech/javascript.svg";
 import Ts from "../assets/tech/typescript.svg";
 import React from "../assets/tech/react.svg";
+import Next from "../assets/tech/next.svg";
 import Styled from "../assets/tech/styled.png";
 import Tailwind from "../assets/tech/tailwind.svg";
 import Vscode from "../assets/tech/vscode.svg";
@@ -10,7 +11,9 @@ import Git from "../assets/tech/git.svg";
 import Github from "../assets/tech/github.svg";
 
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const techStack = [
   { logo: Html, name: "HTML" },
@@ -18,6 +21,7 @@ const techStack = [
   { logo: Js, name: "JavaScript" },
   { logo: Ts, name: "TypeScript" },
   { logo: React, name: "React" },
+  { logo: Next, name: "Nextjs" },
   { logo: Styled, name: "Styled Components" },
   { logo: Tailwind, name: "Tailwind" },
   { logo: Vscode, name: "VS Code" },
@@ -25,24 +29,27 @@ const techStack = [
   { logo: Github, name: "GitHub" },
 ];
 
-const scrollingStack = [...techStack, ...techStack];
-
 const Tech = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <TechDiv>
-      <h1>MY TECH ARSENAL</h1>
-      <hr />
-      <Arsenal
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      >
-        {scrollingStack.map((tech, index) => (
-          <LogoWrapper key={`${tech.name}-${index}`}>
+      <h1 data-aos="fade-down">MY TECH ARSENAL</h1>
+      <hr data-aos="fade-up" data-aos-delay="200" />
+      <Grid>
+        {techStack.map((tech, index) => (
+          <LogoWrapper
+            key={`${tech.name}-${index}`}
+            data-aos="flip-up"
+            data-aos-delay={index * 100}
+          >
             <img src={tech.logo} alt={tech.name} />
             <p>{tech.name}</p>
           </LogoWrapper>
         ))}
-      </Arsenal>
+      </Grid>
     </TechDiv>
   );
 };
@@ -50,9 +57,10 @@ const Tech = () => {
 export default Tech;
 
 const TechDiv = styled.div`
-  margin: 80px auto 0px;
+  margin: 50px auto 0px;
   max-width: 1440px;
-  overflow: hidden;
+  padding: 0 20px;
+  overflow-x: hidden; 
 
   h1 {
     text-align: center;
@@ -70,46 +78,51 @@ const TechDiv = styled.div`
   }
 `;
 
-const Arsenal = styled(motion.div)`
+const Grid = styled.div`
   display: flex;
-  gap: 30px;
-  margin: 40px auto 10px;
-  width: max-content;
-  align-items: center;
-  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 40px auto 0px;
 `;
 
 const LogoWrapper = styled.div`
-  width: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  width: 130px;
+  position: relative;
 
   img {
-    width: 95px;
-    transition: transform ease 0.3s;
+    width: 60px;
+    transition: transform 0.3s ease;
 
     &:hover {
       transform: scale(1.4);
     }
-
-    &:hover + p {
-      visibility: visible;
-    }
   }
 
   p {
+    opacity: 0;
     visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.8s ease;
     text-align: center;
     color: #52154e;
-    margin-top: 30px;
+    margin-top: 5px;
     width: 120px;
     height: 40px;
     padding: 6px;
     border-radius: 5px;
-    border: none;
     background-color: hsl(309.9, 90.9%, 85.9%);
     box-shadow: 0 5px #f641d8;
+  }
+
+  &:hover p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 `;
