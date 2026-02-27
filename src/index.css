@@ -8,5 +8,8 @@ body{
   font-family: Alata, Lato, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 

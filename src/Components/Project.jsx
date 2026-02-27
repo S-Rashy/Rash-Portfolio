@@ -8,7 +8,8 @@ import ProjectProps from "../Reusables/ProjectProps";
 import BCollar from "../assets/projects/bcollar.png";
 import Country from "../assets/projects/country.png";
 import Desserts from "../assets/projects/desserts.png";
-import Sunnyside from "../assets/projects/sunnyside.png";
+import Lezada from "../assets/projects/lezada.png"
+import Shoppy from "../assets/projects/shoppy.png"
 import Ticket from "../assets/projects/ticket.png";
 
 const Project = () => {
@@ -53,11 +54,11 @@ const Project = () => {
           <ProjectProps
             data-aos="zoom-in"
             data-aos-delay="200"
-            Image={Sunnyside}
-            Title="SunnySide"
+            Image={Lezada}
+            Title="Lezada"
             Description="A static website for a creative agency, built with modern HTML and CSS."
-            Link="https://sunnyside-eta-ruby.vercel.app"
-            Repo="https://github.com/S-Rashy/sunnyside"
+            Link="https://lezada-kappa.vercel.app"
+            Repo="https://github.com/S-Rashy/lezada"
           />
         </div>
         <div data-aos="zoom-in-up">

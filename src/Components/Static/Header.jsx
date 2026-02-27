@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <HeaderDiv>
       <HeaderContent>
-        <StyledLink href="/">
+        <StyledLink href="#home">
           <FaHome />
           <span>Home</span>
         </StyledLink>
