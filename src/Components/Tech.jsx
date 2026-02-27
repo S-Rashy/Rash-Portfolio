@@ -7,6 +7,7 @@ import Next from "../assets/tech/next.svg";
 import Styled from "../assets/tech/styled.png";
 import Tailwind from "../assets/tech/tailwind.svg";
 import Vscode from "../assets/tech/vscode.svg";
+import Vue from "../assets/tech/vue.png"
 import Git from "../assets/tech/git.svg";
 import Github from "../assets/tech/github.svg";
 
@@ -21,9 +22,10 @@ const techStack = [
   { logo: Js, name: "JavaScript" },
   { logo: Ts, name: "TypeScript" },
   { logo: React, name: "React" },
+  { logo: Vue, name: "Vue" },
   { logo: Next, name: "Nextjs" },
-  { logo: Styled, name: "Styled Components" },
   { logo: Tailwind, name: "Tailwind" },
+  { logo: Styled, name: "Styled Components" },
   { logo: Vscode, name: "VS Code" },
   { logo: Git, name: "Git" },
   { logo: Github, name: "GitHub" },
@@ -111,9 +113,10 @@ const LogoWrapper = styled.div`
     transition: opacity 0.4s ease, transform 0.8s ease;
     text-align: center;
     color: #52154e;
+    line-height: 15px;
     margin-top: 5px;
     width: 120px;
-    height: 40px;
+    /* height: 40px; */
     padding: 6px;
     border-radius: 5px;
     background-color: hsl(309.9, 90.9%, 85.9%);

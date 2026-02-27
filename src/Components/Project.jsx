@@ -8,8 +8,8 @@ import ProjectProps from "../Reusables/ProjectProps";
 import BCollar from "../assets/projects/bcollar.png";
 import Country from "../assets/projects/country.png";
 import Desserts from "../assets/projects/desserts.png";
-import Lezada from "../assets/projects/lezada.png"
-import Shoppy from "../assets/projects/shoppy.png"
+import Lezada from "../assets/projects/lezada.png";
+import Shoppy from "../assets/projects/shoppy.png";
 import Ticket from "../assets/projects/ticket.png";
 
 const Project = () => {
@@ -17,8 +17,7 @@ const Project = () => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true, 
-
+      once: true,
     });
   }, []);
 
@@ -33,11 +32,36 @@ const Project = () => {
       <ProjectContainer>
         <div data-aos="zoom-in-up">
           <ProjectProps
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            Image={Lezada}
+            Title="Lezada"
+            Description="An elegant e-commerce web app designed to provide a smooth and simple shopping experience."
+            Link="https://lezada-kappa.vercel.app"
+            Repo="https://github.com/S-Rashy/lezada"
+            Stacks={["Vue", "Pinia", "TailwindCSS"]}
+          />
+        </div>
+        <div data-aos="zoom-in-up">
+          <ProjectProps
             Image={BCollar}
             Title="BCollar"
             Description="A full Stack application that connects artisans with potential clients"
             Link="https://frontendbcolar-pyxh.vercel.app"
             Repo="https://frontendbcolar-pyxh.vercel.app"
+            Stacks={["React", "Styled-Component"]}
+          />
+        </div>
+        <div data-aos="zoom-in-up">
+          <ProjectProps
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            Image={Shoppy}
+            Title="Shoppy"
+            Description="A clean and structured online store designed for an intuitive shopping experience."
+            Link="https://shoppy-ebon.vercel.app"
+            Repo="https://github.com/S-Rashy/shoppy"
+            Stacks={["Vue", "Vuex", "TailwindCSS"]}
           />
         </div>
         <div data-aos="zoom-in-up">
@@ -48,17 +72,7 @@ const Project = () => {
             Description="An interactive website that displays countries' data fetched from an API with search and filter features"
             Link="https://s-rashy.github.io/restCountries"
             Repo="https://github.com/S-Rashy/restCountries"
-          />
-        </div>
-        <div data-aos="zoom-in-up">
-          <ProjectProps
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            Image={Lezada}
-            Title="Lezada"
-            Description="A static website for a creative agency, built with modern HTML and CSS."
-            Link="https://lezada-kappa.vercel.app"
-            Repo="https://github.com/S-Rashy/lezada"
+            Stacks={["HTML", "CSS", "JavaScript"]}
           />
         </div>
         <div data-aos="zoom-in-up">
@@ -67,9 +81,10 @@ const Project = () => {
             data-aos-delay="300"
             Image={Ticket}
             Title="Ticket Generator"
-            Description="This app accepts user input and generates ticket instantly for an event"
+            Description="A web app that transforms user information into a customized event ticket in real time."
             Link="https://ticket-generator-coral.vercel.app"
             Repo="https://github.com/S-Rashy/TicketGenerator"
+            Stacks={["React", "Styled-Components", "Cloudinary"]}
           />
         </div>
         <div data-aos="zoom-in-up">
@@ -81,6 +96,7 @@ const Project = () => {
             Description="Responsive product list website built by fetching data from API with add to cart features"
             Link="https://product-list-with-cart-livid-omega.vercel.app"
             Repo="https://github.com/S-Rashy/product-list-with-cart"
+            Stacks={["HTML", "CSS", "JavaScript", "JSON"]}
           />
         </div>
       </ProjectContainer>

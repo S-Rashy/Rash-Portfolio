@@ -10,6 +10,12 @@ const ProjectProps = (props) => {
       <h3>{props.Title}</h3>
       <p>{props.Description}</p>
 
+      <Stack>
+        {props.Stacks?.map((stack, index) => (
+          <span key={index}>{stack}</span>
+        ))}
+      </Stack>
+
       <AllLinks>
         <div className="projectLinks">
           <a href={`${props.Link}`} target="_blank">
@@ -30,14 +36,18 @@ export default ProjectProps;
 
 const ProjectPropsDiv = styled.div`
   width: 300px;
-  height: 400px;
+  height: 420px;
   border-radius: 35px 35px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: #f02eaa66 5px 5px, #f02eaa4c 10px 10px, #f02eaa33 15px 15px,
-    #f02eaa18 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  box-shadow:
+    #f02eaa66 5px 5px,
+    #f02eaa4c 10px 10px,
+    #f02eaa33 15px 15px,
+    #f02eaa18 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
   transition: all 0.3s ease;
 
   img {
@@ -45,8 +55,12 @@ const ProjectPropsDiv = styled.div`
     height: 160px;
     border-radius: 20px 20px 0px 0px;
   }
+  h3 {
+    margin: auto;
+  }
   p {
     width: 260px;
+    margin: auto;
   }
   &:hover {
     transform: translateY(-10px);
@@ -58,7 +72,8 @@ const ProjectPropsDiv = styled.div`
     height: 45px;
     background-color: #f68fe5;
     display: flex;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
       rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transition: all 0.3s ease;
@@ -86,4 +101,19 @@ const AllLinks = styled.div`
   display: flex;
   justify-content: space-around;
   margin: auto;
+`;
+const Stack = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+
+  span {
+    background: #52154e;
+    color: #f68fe5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
 `;
