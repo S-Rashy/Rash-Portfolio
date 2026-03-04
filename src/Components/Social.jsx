@@ -15,26 +15,34 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
 const Social = () => {
-     useEffect(() => {
+  useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-    return ( <SocialDiv >
-        <SocialProps Link="https://twitter.com/RforRashy" Icon={<RiTwitterXFill />}/>
-        <SocialProps Link="www.linkedin.com/in/rashidah-sadiq" Icon={<FaLinkedinIn />}/>
-        <SocialProps Link="https://github.com/S-Rashy" Icon={<FaGithub />}/>
-        <SocialProps Link="sadiqrashidah@gmail.com " Icon={<IoIosMail />}/>
-        <SocialProps Link="https://wa.me/2349097366587" Icon={<FaWhatsapp />}/>
-        <SocialProps Link="https://t.me/RforRashy" Icon={<FaTelegramPlane />}/>
-    </SocialDiv> );
-}
- 
+  return (
+    <SocialDiv>
+      <SocialProps
+        Link="https://LinkedIn/in/rashidah-sadiq"
+        Icon={<FaLinkedinIn />}
+      />
+      <SocialProps Link="https://github.com/S-Rashy" Icon={<FaGithub />} />
+      <SocialProps Link="mailto:sadiqrashidah@gmail.com" Icon={<IoIosMail />} />
+      <SocialProps Link="https://wa.me/2349097366587" Icon={<FaWhatsapp />} />
+      <SocialProps
+        Link="https://twitter.com/RforRashy"
+        Icon={<RiTwitterXFill />}
+      />
+      <SocialProps Link="https://t.me/RforRashy" Icon={<FaTelegramPlane />} />
+    </SocialDiv>
+  );
+};
+
 export default Social;
 
 const SocialDiv = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
-    max-width: 400px ;
-    /* border: 1px solid; */
-
-`
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  max-width: 400px;
+  padding: 0px 16px;
+  /* border: 1px solid; */
+`;
