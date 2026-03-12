@@ -30,7 +30,7 @@ const Project = () => {
       </h6>
 
       <ProjectContainer>
-        {/* <div data-aos="zoom-in-up">
+        <div data-aos="zoom-in-up">
           <ProjectProps
             data-aos="zoom-in"
             data-aos-delay="200"
@@ -41,7 +41,7 @@ const Project = () => {
             Repo="https://github.com/S-Rashy/lezada"
             Stacks={["Vue", "Pinia", "TailwindCSS"]}
           />
-        </div> */}
+        </div>
         <div data-aos="zoom-in-up">
           <ProjectProps
             Image={BCollar}
